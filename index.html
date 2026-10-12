@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d18">
+  <title>SCAM EMPIRE 3D</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="loading-logo">SCAM <span>EMPIRE</span></div>
+    <p>BUILD YOUR EMPIRE</p>
+    <div class="loading-bar">
+      <div id="loading-progress"></div>
+    </div>
+  </div>
+
+  <main id="game">
+    <header class="topbar">
+      <div class="brand">SCAM <span>EMPIRE</span></div>
+      <div class="wealth">
+        <small>YOUR WEALTH</small>
+        <strong id="wealth">₹500</strong>
+      </div>
+      <button id="menu-btn" aria-label="Open menu">☰</button>
+    </header>
+
+    <section id="game-world">
+      <div id="scene-container"></div>
+
+      <div class="location-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong id="location-name">HEADQUARTERS</strong>
+          <small id="location-description">Your empire starts here</small>
+        </div>
+      </div>
+
+      <div class="world-stats">
+        <div><small>INCOME / MIN</small><strong id="income">₹0</strong></div>
+        <div><small>EMPLOYEES</small><strong id="employees">0</strong></div>
+        <div><small>OFFICE LEVEL</small><strong id="office-level">1</strong></div>
+      </div>
+
+      <div id="touch-controls">
+        <button data-move="forward">▲</button>
+        <div>
+          <button data-move="left">◀</button>
+          <button data-move="backward">▼</button>
+          <button data-move="right">▶</button>
+        </div>
+      </div>
+
+      <button id="interact-btn">INTERACT</button>
+    </section>
+
+    <nav id="bottom-nav">
+      <button class="nav-item active" data-page="home">
+        <span>⌂</span><small>Empire</small>
+      </button>
+      <button class="nav-item" data-page="business">
+        <span>▦</span><small>Business</small>
+      </button>
+      <button class="nav-item" data-page="staff">
+        <span>♙</span><small>Staff</small>
+      </button>
+      <button class="nav-item" data-page="city">
+        <span>⌖</span><small>City</small>
+      </button>
+      <button class="nav-item" data-page="pc">
+        <span>▣</span><small>My PC</small>
+      </button>
+    </nav>
+
+    <section id="management-panel">
+      <div class="panel-heading">
+        <div>
+          <small>EMPIRE MANAGEMENT</small>
+          <h2 id="panel-title">Your Headquarters</h2>
+        </div>
+        <span class="level-badge" id="rank">LEVEL 1</span>
+      </div>
+
+      <div id="panel-content"></div>
+    </section>
+
+    <div id="event-modal" class="modal hidden">
+      <div class="modal-card">
+        <button id="close-modal" class="close-btn">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+    <div id="toast" role="status"></div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
